@@ -1,18 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductsComponent } from './products/products.component';
+import { ColorizerDirective } from './products/directives/colorizer.directive';
 
+// Main Switching Box
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ProductsComponent,
+    ColorizerDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // two way binding will work
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComp
 })
 export class AppModule { }

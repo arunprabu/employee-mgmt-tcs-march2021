@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <!-- String Interpolation-->
+  <h2 class="mt-5">{{ pageName }}</h2> 
+  <p [title]="subText">Mouseover to see </p> <!-- Prop Binding -->
+  <input type="text" [value]="subText"> <!-- Prop Binding -->
+
+  <br><br>
+  <p>{{subText}}</p><!-- String Interpolation-->
+  <input type="text" [(ngModel)]="subText"><!-- Two Way Binding -->
+
+  <div class="col">
+    <div class="row" *ngIf="productList">
+
+      <!-- *ngFor Demo -- TODO: find index -->
+      <div class="col-12 col-md-6 col-lg-3" *ngFor="let product of productList">
+        <div class="card">
+          <img class="card-img-top" src="https://dummyimage.com/300x200/55595c/fff" 
+          alt="Card image cap">
+          <div class="card-body">
+          <h4 class="card-title"><a routerLink="/products/{{product.id}}" 
+              title="View Product">{{product.name }}</a></h4>
+            <p class="card-text">Some quick example text to build on the card 
+              title and make up the bulk of the</p>
+            <div class="row">
+              <div class="col">
+                <p class="btn btn-danger btn-block">{{product.price}}</p>
+              </div>
+              <div class="col">
+                <!-- Event Binding -->
+                <a class="btn btn-success btn-block" (click)="addToCartHandler($event)">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <pre>
+      Directives
+      ---
+        Special Instruction to the DOM 
+
+        1. Attribute Directives 
+            Examples: formGroup, formControlName, routerLink, routerLinkActive
+        
+        2. Structural Directives 
+            *ngIf, *ngFor, ngSwitch   
+    </pre>
+
+    <h3>*ngIf Demo</h3>
+
+    <div class="alert alert-success" *ngIf="isLoggedIn; else NotAuthContainer">
+      Thank you for logging in.. You can access premium features.
+    </div>
+    <ng-template #NotAuthContainer>
+      <div class="alert alert-danger">
+        Please login to access premium features.
+      </div>
+    </ng-template>
+
+    <!-- TODO: Try ngSwitch -->
+
+  </div>
+
+  <div>
+    <h3>Custom Directive - Demo</h3>
+    <p>ng g d products/directives/colorizer</p>
+    <div appColorizer>
+      <p>My Directive</p>
+      <p>Testing</p>
+    </div>
+
+  </div>
+
+</div>
