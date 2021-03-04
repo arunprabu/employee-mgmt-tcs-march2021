@@ -13,6 +13,8 @@
 
       <!-- *ngFor Demo -- TODO: find index -->
       <div class="col-12 col-md-6 col-lg-3" *ngFor="let product of productList">
+        <!-- <p>{{ product | json }}</p> -->
+
         <div class="card">
           <img class="card-img-top" src="https://dummyimage.com/300x200/55595c/fff" 
           alt="Card image cap">
@@ -72,6 +74,37 @@
       <p>My Directive</p>
       <p>Testing</p>
     </div>
+
+  </div>
+
+
+  <div>
+    <h3>Pipes -  Demo </h3>
+
+    <p>{{today}}</p>
+    <p>{{today | date }}</p>
+    
+    <!-- Parameterised Pipe -->
+    <p>{{today | date: 'MM/dd/yyyy hh:mm:ss a' }}</p>
+    <p>{{today | date: 'dd-MMM-yyyy hh:mm a' }}</p>
+    <p>{{today | date: 'shortDate' }}</p>
+
+    <p>{{subText }}</p>
+    <p>{{subText | uppercase }}</p>
+
+    <!-- Chaining Pipes -->
+    <p>{{today | date: 'MMMM dd, yyyy hh:mm a' | uppercase }}</p>
+
+    <hr>
+    <h3>Custom Pipes</h3>
+    <p>ng g p shared/pipes/ellipsis</p>
+
+    <p>{{randomText}}</p>
+
+    <p>{{randomText | ellipsis }}</p>
+    <!-- Parameter in Custom Pipe -->
+    <p>{{randomText | ellipsis: '50'}}</p>
+    <p>{{randomText | ellipsis: '10'}}</p>
 
   </div>
 

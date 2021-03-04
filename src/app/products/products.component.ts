@@ -47,6 +47,10 @@ export class ProductsComponent implements OnInit {
 
   isLoggedIn = true;
 
+  today: Date = new Date();
+
+  randomText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -57,6 +61,11 @@ export class ProductsComponent implements OnInit {
     console.log(event);
     event.target.innerText = 'Added';
     alert('Added to Cart');
+
+  }
+
+  update(){
+    this.subText = 'Arun';
   }
 
 

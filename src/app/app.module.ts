@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { ColorizerDirective } from './products/directives/colorizer.directive';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 // Main Switching Box
 @NgModule({
@@ -16,7 +17,8 @@ import { ColorizerDirective } from './products/directives/colorizer.directive';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    ColorizerDirective
+    ColorizerDirective,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
