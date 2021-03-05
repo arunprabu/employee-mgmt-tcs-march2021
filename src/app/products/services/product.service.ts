@@ -55,7 +55,7 @@ export class ProductService {
     return products; // 2. sending the static data to the comp.
   }
 
-  getProductList(): Observable<any>{ // 1. get the req from the comp 
+  getProductList(): Observable<any[]>{ // 1. get the req from the comp 
     console.log('INSIDE getProductList');
     // 2. send the req to the REST API 
     // 2.1 What's the REST API URL? http://jsonplaceholder.typicode.com/users

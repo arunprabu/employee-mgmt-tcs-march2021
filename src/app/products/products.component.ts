@@ -40,7 +40,7 @@ export class ProductsComponent implements OnInit{
     // Demo for Assignment #2
     // 2. send the req to the service 
     this.productService.getProductList()
-      .subscribe( (res: any) => { // 3. get the res from the service
+      .subscribe( (res: IProduct[]) => { // 3. get the res from the service
         console.log(res);
         this.productList  = res;
       });

@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Apple",
       "category": "Fruits",
       "price": "$2.76"
@@ -10,7 +10,10 @@
       "name": "Orange",
       "price": "$5",
       "category": "Fruits",
-      "id": 2
+      "id": "2"
     }
+  ],
+  "employees":[
+
   ]
 }

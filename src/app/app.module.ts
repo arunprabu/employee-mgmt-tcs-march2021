@@ -10,6 +10,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { ColorizerDirective } from './products/directives/colorizer.directive';
 import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
+import { HomeComponent } from './home/home.component';
+import { ConceptsComponent } from './concepts/concepts.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { AboutComponent } from './about/about.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AddEmployeeComponent } from './employees/components/add-employee/add-employee.component';
+import { EmployeeDetailsComponent } from './employees/components/employee-details/employee-details.component';
+import { LoginComponent } from './auth/components/login/login.component';
 
 // Main Switching Box
 @NgModule({
@@ -19,7 +27,15 @@ import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
     FooterComponent,
     ProductsComponent,
     ColorizerDirective,
-    EllipsisPipe
+    EllipsisPipe,
+    HomeComponent,
+    ConceptsComponent,
+    EmployeesComponent,
+    AboutComponent,
+    PageNotFoundComponent,
+    AddEmployeeComponent,
+    EmployeeDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
