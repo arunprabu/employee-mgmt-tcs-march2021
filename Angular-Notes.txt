@@ -1,0 +1,132 @@
+ECMAScript Book Link: https://leanpub.com/understandinges6/read/
+
+Webapps
+----
+  1. Server Side Rendering Apps (SSR Apps)
+      Pages will refresh/reload
+
+      1 Server 
+        index.php
+          HTML + CSS + JS + Back End (PHP)
+
+        Resp: 
+          HTML, CSS, JS, Data 
+
+      Adv
+      ---
+        1. Search Engine Friendly 
+      Disadv
+      ---
+        1. Slower Webapps 
+        2. Not better UX 
+        3. Server has to do the heavy-lifting 
+        4. High Bandwidth Consumption (Expensive)
+
+
+  2. Client-Side Rendering Apps 
+      Pages will not refresh/reload 
+
+      2 Servers 
+        1 Front End Server  - (Single Page Apps/ SPA) 
+          HTML, CSS, JS 
+
+          Resp: 
+            HTML, CSS, JS, (waiting for the data)
+
+        1 Backend Server  - RESTful API 
+          PHP / Java/ C# / Python/ NodeJS + Database queries 
+
+          Resp: 
+            JSON 
+      
+      Adv
+      ---
+        1. Faster web apps 
+        2. Better UX 
+        3. Workload is shared. 
+        4. Lesser Bandwidth Consumption (Less Expensive)
+
+      Disadv
+      ---
+        Not Search Engine Friendly 
+        
+
+  SPA Characteristics (7)
+  ---
+    1. Page should not refresh
+    2. URL should change 
+    3. History should be maintained 
+    4. Header and footer should be intact
+    5. Page should update contextually (section in b/w header and footer  should be updated)
+    6. Active menu should be set 
+    7. Page title should also be set 
+  
+  SPA Frameworks / Libraries 
+  ---
+    Angular 
+    React JS (library)
+    VueJS 
+
+=====
+
+
+Step 0
+---
+  localhost:4200/               Home 
+  localhost:4200/concepts       Concepts
+  localhost:4200/employees      Employees 
+  localhost:4200/about          About
+  localhost:4200/products       Products
+
+
+Step 1
+---
+  ng g c home -is 
+  ng g c concepts -is 
+  ng g c employees -is 
+  ng g c about -it -is 
+
+Step 2:
+----
+  Let's setup the menus with proper URL's in header.comp.html 
+
+Step 3:
+----
+  Configure the Routes in app-routing.module.ts
+
+  (if the above file is not there, create one. )
+  ng g m app-routing --flat m=app 
+
+
+Step 4: 
+----  
+  Let's check the app. URL will change. But the component is not loaded in between header and footer .
+  Let's fix it. 
+
+  In app.comp.html, in between header and footer, have <router-outlet></router-outlet>
+
+Step 5:
+---
+  Let's check the app. Page will still refresh. Let's fix it. 
+
+  replace all href's with routerLink. 
+
+  Page will not reload hereafter.
+
+Step 6: 
+---
+  use routerLinkActive="active" in all li's in header.comp.html 
+
+Step 7: 
+--- 
+  Home menu will always be active. Let's fix it. 
+  in header.comp.html, only in first li have  [routerLinkActiveOptions]="{ exact: true }"
+
+
+
+
+====
+
+===
+
+
