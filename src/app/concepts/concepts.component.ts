@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +10,13 @@ import { Router } from '@angular/router';
 })
 export class ConceptsComponent implements OnInit {
 
+
+  // employeeData = {
+  //   name: '',
+  //   email: '',
+  //   phone: ''
+  // } 
+
   constructor( private router: Router ) { }
 
   ngOnInit(): void {
@@ -18,6 +26,11 @@ export class ConceptsComponent implements OnInit {
     console.log('About to go to Home Page!');
     // redirect the user to home page thru program
     this.router.navigate(['/']);
+  }
+
+  handleAddEmployeeSubmit(formData: NgForm){
+    //console.log(this.employeeData);
+    console.log(formData);
   }
 
 }

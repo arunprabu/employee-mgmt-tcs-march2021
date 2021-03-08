@@ -27,7 +27,7 @@ export class AddEmployeeComponent implements OnInit {
 
   handleAddEmployeeSubmit(){
     console.log(this.addEmployeeForm);  // react form's state will be within
-
+    console.log(this.addEmployeeForm.value); // this is the form data
 
     // send the above data to the employee service 
     // get the res from the service

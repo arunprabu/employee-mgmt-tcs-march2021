@@ -128,5 +128,55 @@ Step 7:
 ====
 
 ===
+Forms 
+---
+  1. Template-Driven Forms 
+      HTML 
+      Directives 
+      Easiest 
+      Smaller learning curve 
 
+      Disadvantages 
+      ---
+        Not suitable for complex form validations 
+        Not suitable for unit testing 
+
+
+  2. Reactive Forms  (Recommended)
+      HTML + TS 
+      FormGroup 
+      Easy 
+      Larger Learning curve 
+
+      suitable for complex form validations 
+      suitable for unit testing 
+
+
+Reactive Forms 
+----
+  Step 0:
+  ----
+    Have the HTML form first 
+  
+  Step 1: 
+  ---
+    Have the form tag equivalent -- ts side 
+
+  Step 2: 
+  --- 
+    Have the input el equivalent -- ts side 
+
+  Step 3: 
+  ---
+    Patchup form tag with the ts 
+
+  Step 4:
+  ---
+    Patchup the input el with the ts 
+
+  Step 5:
+  ---
+    Have the form validation 
+
+  
 
