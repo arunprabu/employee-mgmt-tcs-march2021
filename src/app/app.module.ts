@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,7 +41,8 @@ import { LoginComponent } from './auth/components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // two way binding will work
-    HttpClientModule
+    ReactiveFormsModule, // reactive forms related
+    HttpClientModule // Http Client related module
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComp
