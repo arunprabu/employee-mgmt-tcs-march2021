@@ -12,7 +12,7 @@
   <h2>Template Driven Form</h2>
   <p>Refer add-employee comp for reactive forms </p>
 
-  <form ngNativeValidate class="col-md-6 offset-md-3" #f="ngForm" (ngSubmit)="handleAddEmployeeSubmit(f)">
+  <form ngNativeValidate class="col-md-6 offset-md-3" #addForm="ngForm" (ngSubmit)="handleAddEmployeeSubmit(addForm)">
     <div class="form-group row">
       <label for="staticName" class="col-sm-2 col-form-label">Name</label>
       <div class="col-sm-10">
