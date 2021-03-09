@@ -15,7 +15,7 @@
           <!-- step 4: Patchup the input elements with the ts equivalent  -->
           <!-- Refer TS for Step 5 -->
           <input type="text" class="form-control" placeholder="Enter Name" formControlName="name"
-          [ngClass]="{ 'is-invalid': addEmployeeForm.get('name')?.touched && addEmployeeForm.get('name')?.invalid }"/> 
+          [ngClass]="{ 'is-invalid': addEmployeeForm.get('name')?.touched && addEmployeeForm.get('name')?.invalid  }"/> 
           <!-- Step 6: working on validation messages -->
           <div class="invalid-feedback">
             <div>Name is required</div>

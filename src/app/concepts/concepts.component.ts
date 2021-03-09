@@ -31,6 +31,8 @@ export class ConceptsComponent implements OnInit {
   handleAddEmployeeSubmit(formData: NgForm){
     //console.log(this.employeeData);
     console.log(formData);
+    // submit the formData.value to service
+    
   }
 
 }

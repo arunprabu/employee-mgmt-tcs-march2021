@@ -12,11 +12,12 @@ export class AddEmployeeComponent implements OnInit {
   isSaved = false;
 
   // Step 1: Have the form tag equivalent -- ts side 
+  // 
   addEmployeeForm = new FormGroup({
     // Step 2:  Have the input el equivalents 
     name: new FormControl('', Validators.required ), // Step 5: Let's work on validation -- Refer HTML for Step 6
     phone: new FormControl('', Validators.required ), // TODO: work on min length and max length for phone number
-    email: new FormControl('', [ Validators.required, Validators.email ] )
+    email: new FormControl('', [ Validators.required, Validators.email ])
   });
   // Refer add-employee.comp.html for Step 3
 

@@ -1,1 +1,28 @@
-<p>login works!</p>
+<h2>ngModelGroup Demo</h2>
+<form #f="ngForm">
+  <div ngModelGroup="passwords">
+    <input type="password" name="password" ngModel placeholder="Enter password">
+    <input type="password" name="confirmPassword" ngModel placeholder="Confirm Password">
+  </div>
+
+  <pre>Password Entered: {{f.value?.passwords?.password}}</pre>
+  <pre>Confirmed Password: {{f.value?.passwords?.confirmPassword}}</pre>
+</form>
+
+
+<h2>Form Builder - based Validation Demo </h2>
+<p>Why this? Creating form control instances manually can become repetitive when dealing with multiple forms. The FormBuilder service provides convenient methods for generating controls.</p>
+<form [formGroup]="myForm">
+  <input type="email" placeholder="Enter email"  formControlName="email" required>
+  <input type="password" name='password' placeholder="Enter password" formControlName="password">
+  <input type="password" name='confirmPassword' placeholder="Confirm password" 
+  formControlName="confirmPassword">
+  <input type="checkbox" formControlName="acceptTerms">
+
+  <button type="submit" [disabled]='myForm.invalid'>Save Data</button>
+  <p>
+    Form Status: {{ myForm.status }}
+  </p>
+  <p>Form Data: {{myForm.value | json }}</p>
+</form>
+

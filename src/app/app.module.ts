@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
 import { AddEmployeeComponent } from './employees/components/add-employee/add-employee.component';
 import { EmployeeDetailsComponent } from './employees/components/employee-details/employee-details.component';
 import { LoginComponent } from './auth/components/login/login.component';
+import { SignupComponent } from './auth/components/signup/signup.component';
 
 // Main Switching Box
 @NgModule({
@@ -35,7 +36,8 @@ import { LoginComponent } from './auth/components/login/login.component';
     PageNotFoundComponent,
     AddEmployeeComponent,
     EmployeeDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
