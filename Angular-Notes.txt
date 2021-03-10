@@ -144,7 +144,7 @@ Forms
 
   2. Reactive Forms  (Recommended)
       HTML + TS 
-      FormGroup 
+      FormControl, FormGroup, FormBuilder
       Easy 
       Larger Learning curve 
 
