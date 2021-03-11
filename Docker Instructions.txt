@@ -1,0 +1,24 @@
+Docker Instructions
+----
+  Docker Commands
+---
+Install Docker 
+Create an account in docker hub 
+login using the same creds in Docker Desktop 
+
+
+To create docker image
+  docker build -t <project-name>:latest . 
+
+docker images  (to see docker images )
+
+docker run -p 80:80 <image-name>
+
+
+docker ps     (to see running docker containers )
+docker ps -a    (to see all docker containers )
+
+docker push arunvijayarengan/<image-name>:tagname    (tagname can be latest)
+
+docker tag <image_name>:latest arunvijayarengan/<image_name>:latest
+docker push arunvijayarengan/<image_name>:latest
