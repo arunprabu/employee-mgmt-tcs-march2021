@@ -61,17 +61,14 @@ export class ProductService {
     // 2.1 What's the REST API URL? http://jsonplaceholder.typicode.com/users
     // 2.2 What's the Http Method? GET
     // 2.3 What's the REST API Client? HttpClient
-    return this.http.get("http://localhost:3000/products")
+    return this.http.get('http://localhost:3000/products')
       .pipe( map( (res: any) => { // 3. get the res from the REST API
         console.log(res); 
         // sort, filter, removing, adding
         return res; // 4. send the res back to the comp 
       }));
   }
-  
 
-  
-  
 
 
 }

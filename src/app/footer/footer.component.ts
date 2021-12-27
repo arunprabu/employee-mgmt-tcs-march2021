@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-footer', 
+  selector: 'app-footer',
   template: `
     <footer class='text-center'>
       <hr>
@@ -21,6 +21,8 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const x = 10;
+    console.log(x);
   }
 
 }

@@ -19,6 +19,7 @@ import { AddEmployeeComponent } from './employees/components/add-employee/add-em
 import { EmployeeDetailsComponent } from './employees/components/employee-details/employee-details.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
+import { UserMatchValidator } from './about/usermatch.directive';
 
 // Main Switching Box
 @NgModule({
@@ -37,7 +38,8 @@ import { SignupComponent } from './auth/components/signup/signup.component';
     AddEmployeeComponent,
     EmployeeDetailsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UserMatchValidator
   ],
   imports: [
     BrowserModule,

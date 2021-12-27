@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row">
+    <form class="col-md-6" #f="ngForm" autocomplete="off">
+      <input type="text" placeholder="Enter Name" class="form-control" 
+      ngModel name="personName">
+      <br>
+      <input type="email" placeholder="Enter Email" class="form-control" 
+      ngModel name="email" required forbiddenDomain #userEmail="ngModel" autocomplete="off">
+      <div class="alert alert-danger" *ngIf="userEmail.errors?.forbiddenDomainName">
+        {{userEmail.errors | json }} 
+        <br> Yahoo Emails not allowed
+      </div>
+      <br>
+      <input type="password" placeholder="Enter Password" class="form-control"
+      ngModel name="password">
+      <br>
+      <input type="password" placeholder="Enter Password again" class="form-control"
+      ngModel name="cPassword">
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+</div>

@@ -25,7 +25,7 @@ const routes: Routes = [
       { path: ':id', component: EmployeeDetailsComponent }, // URL Param is id
     ]
   },
-  { path: 'about', component: AboutComponent, canActivate: [ AuthGuard ]},
+  { path: 'about', component: AboutComponent}, // canActivate: [ AuthGuard ]
   { path: 'products', component: ProductsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
